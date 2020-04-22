@@ -3,13 +3,13 @@
         <div class="labels">
 
         </div>
-        <img src="{{ Storage::url($product->image) }}" alt="iPhone X 64GB">
+        <img src="{{ Storage::url($product->image) }}" height="120px">
         <div class="caption">
             <h3>{{$product->name}}</h3>
             <p>{{$product->price}}</p>
             <p>
             <form action="{{route('basket-add', $product)}}" method="POST">
-                <button type="submit" class="btn btn-primary" role="button">В корзину</button>
+                <button type="submit" class="btn btn-primary" role="button">В корзину!</button>
 
 {{--                {{ $product->category->name }}--}}
 
@@ -17,7 +17,6 @@
                    role="button">Подробнее</a>
                 @csrf
             </form>
-            </p>
         </div>
     </div>
 </div>

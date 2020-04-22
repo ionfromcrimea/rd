@@ -50,8 +50,9 @@ class ProductController extends Controller
 //dd($params);
 
         $path = $request->file('image')->store('products');
-        $params = $request->all();
+//        $params = $request->all();
         $params['image'] = $path;
+//        dd($params);
 
 //        unset($params['image']);
 //        if ($request->has('image')) {
